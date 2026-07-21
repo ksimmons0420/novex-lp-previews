@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>GF-9 - Results Without Needles | Novex Biotech</title>
-<meta name="description" content="GF-9 raises your body's own growth hormone with no needles and no prescription. Clinically studied at Pennington Biomedical Research Center. 90-day money-back guarantee.">
+<meta name="description" content="GF-9 raises your body's own growth hormone with no needles and no prescription. Studied at Pennington Biomedical Research Center. 90-day money-back guarantee.">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="GF-9 - Results Without Needles | Novex Biotech">
-<meta property="og:description" content="GF-9 raises your body's own growth hormone with no needles and no prescription. Clinically studied at Pennington Biomedical Research Center. 90-day money-back guarantee.">
-<meta property="og:type" content="website">
+<meta property="og:description" content="GF-9 raises your body's own growth hormone with no needles and no prescription. Studied at Pennington Biomedical Research Center. 90-day money-back guarantee.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdn.shopify.com">
 <style>html,body{margin:0;padding:0;background:#fff}</style>
 </head>
 <body>
@@ -203,6 +203,40 @@
 .nvx-lp-sticky a:active{transform:scale(.975)}
 .nvx-lp-sticky small{display:block;text-align:center;font-size:11.5px;color:#5b6079;margin-top:6px;font-family:'DM Sans',sans-serif}
 
+/* hero product media */
+.nvx-lp .nvx-lp-hero__media{position:relative;margin-bottom:18px;background:#fff;border-radius:11px;padding:10px;box-shadow:0 14px 40px rgba(0,0,0,.28)}
+.nvx-lp .nvx-lp-hero__media img{border-radius:7px;width:100%;height:auto}
+
+/* ingredient showcase */
+.nvx-lp .nvx-lp-ingr{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.nvx-lp .nvx-lp-ingr__item{text-align:center}
+.nvx-lp .nvx-lp-ingr__dot{width:74px;height:74px;border-radius:50%;background:linear-gradient(150deg,#eef1f9,#dfe4f2);border:1px solid #d5dbeb;display:flex;align-items:center;justify-content:center;margin:0 auto 13px;font-weight:700;font-size:19px;color:var(--navy);letter-spacing:-.02em}
+.nvx-lp .nvx-lp-ingr__item h4{font-size:15.5px;font-weight:700;color:var(--navy);margin-bottom:5px}
+.nvx-lp .nvx-lp-ingr__item p{font-size:14px}
+
+/* protocol / how to take */
+.nvx-lp .nvx-lp-proto{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.nvx-lp .nvx-lp-proto__card{background:#fff;border:2px solid var(--line);border-radius:12px;padding:24px 22px;box-shadow:0 4px 22px rgba(19,24,64,.06)}
+.nvx-lp .nvx-lp-proto__card b{display:block;font-size:12px;letter-spacing:.11em;text-transform:uppercase;color:var(--red);margin-bottom:9px}
+.nvx-lp .nvx-lp-proto__card h3{font-size:19px;margin-bottom:7px}
+.nvx-lp .nvx-lp-proto__card p{font-size:15px}
+.nvx-lp .nvx-lp-proto__warn{background:#fbf6f6;border-left:3px solid var(--red);border-radius:0 8px 8px 0;padding:16px 20px;margin-top:22px}
+.nvx-lp .nvx-lp-proto__warn p{font-size:15.5px;color:#2b3048;margin:0}
+
+/* authority / doctor */
+.nvx-lp .nvx-lp-doc{background:#fff;border:1px solid var(--line);border-radius:13px;padding:32px;display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;box-shadow:0 6px 28px rgba(19,24,64,.08)}
+.nvx-lp .nvx-lp-doc__badge{width:104px;height:104px;border-radius:50%;background:linear-gradient(150deg,var(--navy),#1d2559);display:flex;align-items:center;justify-content:center;flex-direction:column;color:#fff;text-align:center;line-height:1.15}
+.nvx-lp .nvx-lp-doc__badge b{font-size:26px;display:block}
+.nvx-lp .nvx-lp-doc__badge span{font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;opacity:.75}
+.nvx-lp .nvx-lp-doc blockquote{font-size:19px;color:var(--navy);font-style:italic;line-height:1.5;margin-bottom:13px}
+.nvx-lp .nvx-lp-doc cite{font-style:normal;font-size:14.5px;color:var(--muted);display:block}
+.nvx-lp .nvx-lp-doc cite b{color:var(--navy);font-weight:700;display:block;font-size:15.5px;margin-bottom:2px}
+
+/* image band */
+.nvx-lp .nvx-lp-band{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center}
+.nvx-lp .nvx-lp-band img{border-radius:12px;width:100%;height:auto}
+.nvx-lp .nvx-lp-band--rev .nvx-lp-band__media{order:2}
+
 /* reveal */
 .nvx-lp .nvx-lp-rv{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
 .nvx-lp .nvx-lp-rv.is-in{opacity:1;transform:none}
@@ -211,6 +245,11 @@
   .nvx-lp .nvx-lp-hero__grid{grid-template-columns:1fr;gap:32px}
   .nvx-lp .nvx-lp-cards--4,.nvx-lp .nvx-lp-cards--3,.nvx-lp .nvx-lp-tl,.nvx-lp .nvx-lp-plans{grid-template-columns:1fr}
   .nvx-lp .nvx-lp-badges{grid-template-columns:repeat(3,1fr)}
+  .nvx-lp .nvx-lp-ingr{grid-template-columns:repeat(2,1fr);gap:18px}
+  .nvx-lp .nvx-lp-proto,.nvx-lp .nvx-lp-band{grid-template-columns:1fr;gap:20px}
+  .nvx-lp .nvx-lp-band--rev .nvx-lp-band__media{order:0}
+  .nvx-lp .nvx-lp-doc{grid-template-columns:1fr;text-align:center;justify-items:center;gap:20px;padding:26px 22px}
+  .nvx-lp .nvx-lp-doc blockquote{font-size:17px}
   .nvx-lp .nvx-lp-stats__grid{grid-template-columns:repeat(2,1fr);gap:24px}
   .nvx-lp .nvx-lp-guarantee{grid-template-columns:1fr;text-align:center;justify-items:center}
   .nvx-lp section{padding:46px 0}
@@ -248,6 +287,9 @@
       </div>
 
       <div class="nvx-lp-hero__card">
+        <div class="nvx-lp-hero__media">
+          <img src="https://cdn.shopify.com/s/files/1/0600/8160/2741/files/Novex-Biotech-GF-9-Box-with-Bottle.jpg?width=760" alt="Novex Biotech GF-9 box and bottle, 120 capsules" width="760" height="760" fetchpriority="high" decoding="async">
+        </div>
         <h3>GF-9&reg; 90-Day Starter Kit</h3>
         <p style="font-size:14.5px">The full three-month protocol</p>
         <div class="nvx-lp-price"><b>$198</b><s>$297</s></div>
@@ -348,6 +390,65 @@
     </div>
   </section>
 
+  <!-- INGREDIENT SHOWCASE -->
+  <section style="background:#f5f6fa">
+    <div class="nvx-lp__wrap">
+      <div class="nvx-lp-center nvx-lp-lede">
+        <div class="nvx-lp-eyebrow">What is actually in it</div>
+        <h2>Six amino acids. One patented ratio.</h2>
+        <p>There is no hormone in this bottle, and nothing exotic. What took 25 years was not finding the ingredients &mdash; it was finding the exact proportions that move the needle, then proving it in a trial.</p>
+      </div>
+      <div class="nvx-lp-ingr">
+        <div class="nvx-lp-ingr__item nvx-lp-rv"><div class="nvx-lp-ingr__dot">L-Lys</div><h4>L-Lysine HCl</h4><p>An essential amino acid &mdash; your body cannot make it, so it has to come in from outside.</p></div>
+        <div class="nvx-lp-ingr__item nvx-lp-rv"><div class="nvx-lp-ingr__dot">L-Arg</div><h4>L-Arginine HCl</h4><p>The most studied amino acid in growth hormone research, and the backbone of the blend.</p></div>
+        <div class="nvx-lp-ingr__item nvx-lp-rv"><div class="nvx-lp-ingr__dot">OXO</div><h4>Oxo-proline</h4><p>A proline derivative that appears in the patented pairing rather than on its own.</p></div>
+        <div class="nvx-lp-ingr__item nvx-lp-rv"><div class="nvx-lp-ingr__dot">L-Cys</div><h4>Fermented L-Cysteine</h4><p>Included as a fermented extract rather than a synthetic isolate.</p></div>
+        <div class="nvx-lp-ingr__item nvx-lp-rv"><div class="nvx-lp-ingr__dot">L-Gln</div><h4>L-Glutamine</h4><p>The most abundant free amino acid in human muscle tissue.</p></div>
+        <div class="nvx-lp-ingr__item nvx-lp-rv"><div class="nvx-lp-ingr__dot">SCH</div><h4>Schizonepeta</h4><p>An aerial-parts botanical powder, and the one ingredient most competitors do not carry.</p></div>
+      </div>
+      <p class="nvx-lp-center" style="font-size:13.5px;color:#5b6079;margin-top:26px">GenysFactor&trade; Proprietary Blend, 2.9 g per 4-capsule serving. Hormone-free, gluten-free, third-party verified, manufactured under GMP.</p>
+    </div>
+  </section>
+
+  <!-- PROTOCOL - addresses the #1 documented reason men conclude it did nothing -->
+  <section>
+    <div class="nvx-lp__wrap">
+      <div class="nvx-lp-center nvx-lp-lede">
+        <div class="nvx-lp-eyebrow">Before you order</div>
+        <h2>Make sure this fits your day.</h2>
+        <p>The directions are specific, and that is the single most common reason men conclude GF-9 did nothing &mdash; they took it in a way that never gave it a chance. There are two windows that work. Pick one before you buy.</p>
+      </div>
+      <div class="nvx-lp-proto">
+        <div class="nvx-lp-proto__card nvx-lp-rv">
+          <b>Option 1</b>
+          <h3>At bedtime</h3>
+          <p>Four capsules with water at least two hours after your last food. For most men this is the easiest one to keep, because you are asleep for the window anyway.</p>
+        </div>
+        <div class="nvx-lp-proto__card nvx-lp-rv">
+          <b>Option 2</b>
+          <h3>First thing, fasted</h3>
+          <p>Four capsules on waking, then hold off on breakfast. This suits early trainers and anyone already eating on a compressed window.</p>
+        </div>
+      </div>
+      <div class="nvx-lp-proto__warn">
+        <p><b>Honest heads-up:</b> the capsules are large and there are four in a serving. If a fasted window genuinely will not work in your life, this is not the right product for you &mdash; and we would rather you know that now than after the first bottle.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTHORITY -->
+  <section style="padding-top:0">
+    <div class="nvx-lp__wrap">
+      <div class="nvx-lp-doc nvx-lp-rv">
+        <div class="nvx-lp-doc__badge"><b>D.O.</b><span>Sports Medicine</span></div>
+        <div>
+          <blockquote>&ldquo;Rather than replacing natural HGH &mdash; something no pill can do &mdash; the product uses an amino acid blend to stimulate the body&rsquo;s own production of human growth hormone.&rdquo;</blockquote>
+          <cite><b>Dr. Andrew McMarlin, D.O.</b>Board-certified in sports medicine, former U.S. Olympic team physician and Naval officer. GF-9 user.</cite>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- TIMELINE - brand approved expectation setting -->
   <section style="background:#f5f6fa">
     <div class="nvx-lp__wrap">
@@ -362,6 +463,23 @@
         <div class="nvx-lp-tl__item nvx-lp-rv"><div class="nvx-lp-tl__num">M3</div><h3>Month three</h3><ul><li>Renewed strength</li><li>Improved performance</li><li>Help getting through workouts</li></ul></div>
       </div>
       <p class="nvx-lp-center" style="font-size:13px;color:#8990ad;margin-top:20px">Individual results will vary. Use in conjunction with any sensible diet and exercise regimen.</p>
+    </div>
+  </section>
+
+  <!-- PROOF BAND -->
+  <section style="padding-bottom:34px">
+    <div class="nvx-lp__wrap">
+      <div class="nvx-lp-band nvx-lp-rv">
+        <div class="nvx-lp-band__media">
+          <img src="https://cdn.shopify.com/s/files/1/0600/8160/2741/files/novex-biotech-gf9-image.jpg?width=900" alt="GF-9 with 4 clinical trials, 15 patents and third-party verified badges" width="900" height="900" loading="lazy" decoding="async">
+        </div>
+        <div>
+          <div class="nvx-lp-eyebrow">Why we can say any of this</div>
+          <h2>Twenty-five years before it earned a label.</h2>
+          <p style="margin-bottom:14px">Four clinical trials. Fifteen U.S. and international patents.&Dagger; Third-party verified and manufactured under Good Manufacturing Practices. The trial behind the growth hormone claim was run at Pennington Biomedical Research Center and registered publicly as NCT01540773.</p>
+          <p>None of that guarantees what you personally will feel &mdash; nothing honestly could. It does mean the claim on the box came from somewhere, and that you can go read it yourself.</p>
+        </div>
+      </div>
     </div>
   </section>
 
