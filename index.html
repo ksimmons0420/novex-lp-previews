@@ -27,7 +27,7 @@ header p{color:#c3c8de;font-size:17.5px;max-width:620px}
 .meta b{color:#fff;font-weight:600}
 
 section{padding:52px 0}
-.cards{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .card{border:1px solid var(--line);border-radius:13px;overflow:hidden;background:#fff;box-shadow:0 5px 26px rgba(19,24,64,.07);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
 .card:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(19,24,64,.13)}
 .card__top{background:var(--navy);color:#fff;padding:22px 24px}
@@ -60,6 +60,9 @@ section{padding:52px 0}
 footer{background:#0d1130;color:#8990ad;padding:28px 0;font-size:12.5px;text-align:center}
 footer p{margin-bottom:5px}
 
+@media (max-width:1000px){
+  .cards{grid-template-columns:1fr}
+}
 @media (max-width:820px){
   .cards,.how{grid-template-columns:1fr}
   section{padding:38px 0}
@@ -71,8 +74,8 @@ footer p{margin-bottom:5px}
 <header>
   <div class="wrap">
     <div class="eyebrow">Landing page previews &middot; Internal review</div>
-    <h1>Novex Biotech &mdash; GF-9 landing pages</h1>
-    <p>Two concepts built for different points in the funnel. Both are mobile-first &mdash; open them on a phone if you can.</p>
+    <h1>Novex Biotech &mdash; GF-9 Black Label landing pages</h1>
+    <p>Three concepts across two points in the funnel. B and B2 are the same page with different lead angles &mdash; built to be run against each other. Both are mobile-first &mdash; open them on a phone if you can.</p>
     <div class="meta">
       <span><b>Product:</b> GF-9 Black Label</span> <span>&middot;</span>
       <span><b>Status:</b> Draft for review</span> <span>&middot;</span>
@@ -102,6 +105,26 @@ footer p{margin-bottom:5px}
         </div>
         <div class="card__foot">
           <a class="btn" href="lp-b-no-needles.html">View Option B</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card__top">
+          <div class="card__tag">Option B2 &middot; Broad persona</div>
+          <h2>&ldquo;You Didn&rsquo;t Get Lazy&rdquo;</h2>
+          <p>The same page, opened up: for any man doing the same work for less return.</p>
+        </div>
+        <div class="card__body">
+          <dl>
+            <dt>Product</dt><dd><b>GF-9 Black Label</b> &mdash; $119 / $238 three-month</dd>
+            <dt>Audience</dt><dd>Men 45&ndash;65 who never stopped training and are getting less back</dd>
+            <dt>Traffic</dt><dd>Cold to warm paid social and search</dd>
+            <dt>Lead angle</dt><dd>Age-related GH decline &mdash; injections are one option among four, not the thesis</dd>
+            <dt>Built because</dt><dd>Review data shows buyers compare to other boosters, almost never to injections</dd>
+          </dl>
+        </div>
+        <div class="card__foot">
+          <a class="btn" href="lp-b2-broad.html">View Option B2</a>
         </div>
       </div>
 
