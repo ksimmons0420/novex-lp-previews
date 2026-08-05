@@ -36,10 +36,12 @@
    - Testimonials require: results-not-typical + diet/exercise + compensation disclosure.
    - FDA structure-function block required on page.
    OPEN ITEM: brand book p.10 says 628%, packaging says 682%. Using 682%. CONFIRM WITH CLIENT.
-   DELIBERATE OMISSION: Black Label's GLP-1 / "up to 23 lbs lost" claim is NOT used on this page.
-     It is the product's headline differentiator on the live site, but it is blocked pending client
-     substantiation - and the parent company's 2006 FTC action was specifically about unsubstantiated
-     weight-loss claims. Page is built on the HGH + strength/energy/focus angle instead.
+   GLP-1 / WEIGHT-LOSS: NOW INCLUDED (client-directed 2026-08-05). Reverses the earlier
+     "do not use" block. Uses the brand's EXACT public wording + footnotes: "Boost GLP-1 levels
+     up to 55%*", "up to 23 lbs. lost*", substantiated by cissus quadrangularis (12-wk study,
+     55.66% GLP-1 vs placebo). Kept the "up to" hedges + FDA disclaimer + "not typical / diet+exercise".
+     Did NOT staple the patent (double dagger) footnote to the weight-loss number as the live site does.
+     STILL NEEDS client/legal written sign-off before going live (highest-risk copy; parent FTC history).
    OPEN ITEM: testimonials below are transcribed from brand-book site mockups. VERIFY against live Yotpo before publish.
 -->
 <script>/* viewport guard: ensure mobile width even if the host/preview lacks one */
@@ -249,10 +251,28 @@
 .nvx-lp .nvx-lp-band--rev .nvx-lp-band__media{order:2}
 
 /* reveal */
+/* black label stack */
+.nvx-lp .nvx-lp-stack{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;max-width:900px;margin:0 auto}
+.nvx-lp .nvx-lp-stack__col{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:28px 26px}
+.nvx-lp .nvx-lp-stack__col--amp{background:rgba(162,25,32,.18);border-color:rgba(162,25,32,.5)}
+.nvx-lp .nvx-lp-stack__plus{display:flex;align-items:center;justify-content:center;font-size:34px;font-weight:700;color:#ff5a63;padding:0 18px}
+.nvx-lp .nvx-lp-stack__tag{font-size:11.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#9aa1bd;margin-bottom:8px}
+.nvx-lp .nvx-lp-stack__col--amp .nvx-lp-stack__tag{color:#ff8f96}
+.nvx-lp .nvx-lp-stack__col h3{font-size:24px;color:#fff;margin-bottom:10px}
+.nvx-lp .nvx-lp-stack__col p{font-size:14.5px;color:#c3c8de;margin-bottom:16px}
+.nvx-lp .nvx-lp-stack__col ul{list-style:none}
+.nvx-lp .nvx-lp-stack__col li{font-size:15px;color:#fff;padding-left:24px;position:relative;margin-bottom:9px}
+.nvx-lp .nvx-lp-stack__col li::before{content:"";position:absolute;left:0;top:7px;width:9px;height:9px;border-radius:50%;background:#4b5375}
+.nvx-lp .nvx-lp-stack__col--amp li::before{background:#ff5a63}
+.nvx-lp .nvx-lp-stack__proof{max-width:820px;margin:26px auto 0;background:rgba(255,255,255,.06);border-left:3px solid #ff5a63;border-radius:0 10px 10px 0;padding:18px 22px}
+.nvx-lp .nvx-lp-stack__proof p{font-size:15px;color:#e8eaf3;margin:0}
+.nvx-lp .nvx-lp-stack__proof b{color:#fff}
 .nvx-lp .nvx-lp-rv{opacity:0;transform:translateY(16px);transition:opacity .5s ease,transform .5s ease}
 .nvx-lp .nvx-lp-rv.is-in{opacity:1;transform:none}
 
 @media (max-width:900px){
+  .nvx-lp .nvx-lp-stack{grid-template-columns:1fr;gap:12px}
+  .nvx-lp .nvx-lp-stack__plus{padding:2px 0;font-size:26px}
   .nvx-lp .nvx-lp-hero__grid{grid-template-columns:1fr;gap:32px}
   .nvx-lp .nvx-lp-cards--4,.nvx-lp .nvx-lp-cards--3,.nvx-lp .nvx-lp-tl,.nvx-lp .nvx-lp-plans{grid-template-columns:1fr}
   .nvx-lp .nvx-lp-badges{grid-template-columns:repeat(3,1fr)}
@@ -519,6 +539,44 @@
     </div>
   </section>
 
+  <!-- BLACK LABEL STACK - GF-9 (engine) + Performance AMP (companion incl. GLP-1 / weight-loss) -->
+  <section style="background:var(--navy);color:#fff">
+    <div class="nvx-lp__wrap">
+      <div class="nvx-lp-center nvx-lp-lede">
+        <div class="nvx-lp-eyebrow" style="color:#ff5a63">Why it says Black Label</div>
+        <h2 style="color:#fff">GF-9 is the engine. Black Label is the whole stack.</h2>
+        <p style="color:#c3c8de">Standard GF-9 does one thing well &mdash; it supports your body&rsquo;s own growth hormone. Black Label keeps that engine and adds a second formula, Performance AMP&trade;, for the benefits GF-9 on its own was never built to cover.</p>
+      </div>
+      <div class="nvx-lp-stack">
+        <div class="nvx-lp-stack__col nvx-lp-rv">
+          <div class="nvx-lp-stack__tag">The engine</div>
+          <h3>GF-9&reg;</h3>
+          <p>The patented amino acid blend, studied at Pennington Biomedical Research Center.</p>
+          <ul>
+            <li>Supports your own GH production*</li>
+            <li>Lean muscle &amp; recovery*</li>
+            <li>Energy and sleep*</li>
+          </ul>
+        </div>
+        <div class="nvx-lp-stack__plus" aria-hidden="true">+</div>
+        <div class="nvx-lp-stack__col nvx-lp-stack__col--amp nvx-lp-rv">
+          <div class="nvx-lp-stack__tag">The companion</div>
+          <h3>Performance AMP&trade;</h3>
+          <p>Rapid benefits GF-9 alone was never built to deliver.</p>
+          <ul>
+            <li>Increase strength*</li>
+            <li>Sharper focus &amp; reaction time*</li>
+            <li>Boost GLP-1 levels up to 55%*</li>
+            <li>Up to 23 lbs. lost*</li>
+          </ul>
+        </div>
+      </div>
+      <div class="nvx-lp-stack__proof nvx-lp-rv">
+        <p><b>The GLP-1 and weight-loss piece is not hand-waving.</b> Performance AMP&trade; delivers cissus quadrangularis, a clinically tested plant extract shown to improve body composition. In one 12-week study, subjects experienced a 55.66% increase in GLP-1 levels compared to placebo.* Weight-loss results are not typical and depend on diet and exercise.</p>
+      </div>
+    </div>
+  </section>
+
   <!-- INGREDIENT SHOWCASE -->
   <section style="background:#f5f6fa">
     <div class="nvx-lp__wrap">
@@ -533,7 +591,7 @@
         <div class="nvx-lp-ingr__item nvx-lp-rv"><div class="nvx-lp-ingr__dot">SCH</div><h4>Schizonepeta</h4><p>The botanical in the patented blend that most competitors do not carry.</p></div>
         <div class="nvx-lp-ingr__item nvx-lp-rv"><div class="nvx-lp-ingr__dot">GPC</div><h4>Alpha-GPC</h4><p>A choline compound in Performance AMP&trade;, included for focus and output.</p></div>
         <div class="nvx-lp-ingr__item nvx-lp-rv"><div class="nvx-lp-ingr__dot">THE</div><h4>L-Theanine</h4><p>Paired with the caffeine to take the edge off it rather than amplify it.</p></div>
-        <div class="nvx-lp-ingr__item nvx-lp-rv"><div class="nvx-lp-ingr__dot">CIS</div><h4>Cissus Quadrangularis</h4><p>A botanical long used alongside training and joint support.</p></div>
+        <div class="nvx-lp-ingr__item nvx-lp-rv"><div class="nvx-lp-ingr__dot">CIS</div><h4>Cissus Quadrangularis</h4><p>The clinically studied extract behind Black Label&rsquo;s GLP-1 and weight-management support.*</p></div>
       </div>
       <p class="nvx-lp-center" style="font-size:13.5px;color:#5b6079;margin-top:26px">GF-9&reg;: GenysFactor&trade; Proprietary Blend, 2.9 g per 4-capsule serving. Performance AMP&trade;: Alpha-GPC, L-theanine, cissus and 130 mg natural caffeine per 3-capsule serving. Hormone-free, third-party verified, manufactured under GMP.</p>
     </div>
@@ -720,6 +778,7 @@
       <p>**Reviews reflect the individuals&rsquo; personal opinions. Results not typical. Individuals may have received free product or compensation in exchange for their honest review. Individual results will vary. Use in conjunction with any sensible diet and exercise regimen.</p>
       <p>&dagger;&dagger;If, for any reason, you&rsquo;re not satisfied with your Novex purchase, simply return it within the 90-day trial period for a full refund of the purchase price. Your 90-day trial begins 5 days after your product ships.</p>
       <p>&Dagger;GF-9 is protected by 15 U.S. and international patents. Patent protection does not indicate efficacy. The GF-9 clinical trial (NCT01540773) was conducted at Pennington Biomedical Research Center; it measured serum growth hormone over a 120-minute window in 16 participants.</p>
+      <p>GLP-1 and weight-management statements refer to cissus quadrangularis in Performance AMP&trade;. In one 12-week study, subjects experienced a 55.66% increase in GLP-1 levels compared to placebo. Weight-loss results are not typical and vary with diet and exercise.</p>
       <p>Free standard shipping on all U.S. orders. Offer cannot be combined with other offers. GF-9 is a dietary supplement and is not a substitute for medical advice, diagnosis, or treatment. Consult your physician before beginning any supplement program.</p>
       <p style="margin-top:14px">&copy; Novex Biotech. All rights reserved. &middot; customerservice@novexbiotech.com &middot; 1-800-789-7566</p>
     </div>
