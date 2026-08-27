@@ -99,7 +99,7 @@
 .nvx-lp .nvx-lp-btn:hover{background:var(--red-dk);box-shadow:0 7px 22px rgba(162,25,32,.34);transform:translateY(-1px)}
 .nvx-lp .nvx-lp-btn:active{transform:scale(.975)}
 .nvx-lp .nvx-lp-btn--wide{display:block;width:100%}
-.nvx-lp a:focus-visible,.nvx-lp summary:focus-visible{outline:3px solid #a21920;outline-offset:3px;border-radius:4px}
+.nvx-lp a:focus-visible,.nvx-lp button:focus-visible,.nvx-lp summary:focus-visible{outline:3px solid #a21920;outline-offset:3px;border-radius:4px}
 .nvx-lp .nvx-lp-reassure{font-size:13.5px;color:var(--muted);margin-top:11px}
 
 .nvx-lp .nvx-lp-promo{background:var(--red);color:#fff;text-align:center;padding:9px 16px;font-size:13.5px;font-weight:700}
@@ -223,7 +223,7 @@
 .nvx-lp .nvx-lp-doc{background:var(--navy);color:#fff;border-radius:13px;padding:30px;display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:center;margin:34px 0}
 .nvx-lp .nvx-lp-doc__badge{width:92px;height:92px;border-radius:50%;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;line-height:1.15}
 .nvx-lp .nvx-lp-doc__badge b{font-size:23px;color:#fff}
-.nvx-lp .nvx-lp-doc__badge span{font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:#9aa1bd}
+.nvx-lp .nvx-lp-doc__badge span{font-size:12px;letter-spacing:.09em;text-transform:uppercase;color:#9aa1bd}
 .nvx-lp .nvx-lp-doc blockquote{font-size:17.5px;color:#fff;font-style:italic;line-height:1.5;margin-bottom:11px}
 .nvx-lp .nvx-lp-doc cite{font-style:normal;font-size:14px;color:#9aa1bd;display:block}
 .nvx-lp .nvx-lp-doc cite b{color:#fff;font-weight:700;display:block;font-size:15px;margin-bottom:2px}
@@ -250,7 +250,7 @@
   .nvx-lp .nvx-lp-item{padding:26px 22px 22px;margin-bottom:18px}
   .nvx-lp .nvx-lp-itemfig{margin:-26px -22px 18px;border-radius:13px 13px 0 0}
   .nvx-lp-sticky{display:block}
-  .nvx-lp .nvx-lp-legal{padding-bottom:104px}
+  .nvx-lp .nvx-lp-legal{padding-bottom:120px}
 }
 @media (prefers-reduced-motion:reduce){
   .nvx-lp *,.nvx-lp .nvx-lp-rv{transition:none!important;animation:none!important;opacity:1!important;transform:none!important}
@@ -302,16 +302,16 @@
      "priceCurrency": "USD",
      "availability": "https://schema.org/InStock",
      "url": "https://www.novexbiotech.com/products/gf-9",
-     "description": "Ships every 30 days, 20.2% off the $99 one-time price. Cancel, pause, or skip anytime."
+     "description": "Ships every 30 days, 20.2% off the $99 one-time price. Auto-renews monthly; cancel anytime."
     },
     {
      "@type": "Offer",
-     "name": "3-Month Bundle",
+     "name": "3-Month Delivery",
      "price": "198.00",
      "priceCurrency": "USD",
      "availability": "https://schema.org/InStock",
      "url": "https://www.novexbiotech.com/products/gf-9",
-     "description": "One-time purchase, 3-month (90-day) supply. Save $99 versus three separate one-time purchases."
+     "description": "Subscription, 3-month (90-day) supply, Buy 2 Get 1 Free. Save $99 versus three separate one-time purchases. Auto-renews every 90 days; cancel anytime."
     }
    ]
   },
@@ -323,7 +323,7 @@
      "name": "What if it does not work for me?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Return it within the 90-day trial period for a full refund of the purchase price. Your 90-day trial begins 5 days after your product ships. That is the whole reason the guarantee is 90 days rather than 30 \u2014 you need the full window to judge it fairly."
+      "text": "Return any used or unused item(s) in the original packaging within 90 days of receiving your product for a full refund. That is the whole reason the guarantee is 90 days rather than 30 \u2014 you need the full window to judge it fairly."
      }
     },
     {
@@ -339,7 +339,7 @@
      "name": "Can I cancel a subscription easily?",
      "acceptedAnswer": {
       "@type": "Answer",
-      "text": "Yes \u2014 pause, skip, or cancel anytime from your account. If you would rather avoid a subscription entirely, the one-time $99 purchase carries the same guarantee."
+      "text": "Yes \u2014 subscriptions auto-renew until you cancel; you're emailed at least 3 days before each renewal, and you can cancel anytime by calling 1-800-789-7566 or logging into your account. If you would rather avoid a subscription entirely, the one-time $99 purchase carries the same guarantee."
      }
     },
     {
@@ -394,6 +394,7 @@
       <div class="nvx-lp-eyebrow" style="color:#ff5a63">Read this first</div>
       <h1>7 Things Nobody Tells You Before You Try an <em>HGH Booster</em></h1>
       <p class="nvx-lp-ehero__sub">Here is the honest version &mdash; including the parts that are easy to get wrong, and the questions worth asking before you buy any HGH supplement.</p>
+      <a class="nvx-lp-btn nvx-lp-cta" href="#nvx-offer" data-cta="hero-anchor" style="margin-bottom:8px">See Pricing Options</a>
       <div class="nvx-lp-byline">
         <b>Novex Biotech</b> <span>&middot;</span> <span>25 years of research</span> <span>&middot;</span> <span>4 clinical trials</span> <span>&middot;</span> <span>15 patents</span> <span>&middot;</span> <span>Updated August 2026</span>
       </div>
@@ -446,6 +447,13 @@
         <div class="nvx-lp-pull"><p><b>If you take nothing else from this page:</b> pick your slot &mdash; before breakfast or after dinner &mdash; and keep it identical for 90 days before you form an opinion. Inconsistent dosing is an easy way to never give the product a fair test.</p></div>
       </div>
 
+      <div class="nvx-lp-inline">
+        <h3>Already decided the format is not the problem?</h3>
+        <p>Subscribe &amp; Save is 20.2% off the one-time price, ships every 30 days, and you can cancel anytime.</p>
+        <a class="nvx-lp-btn nvx-lp-cta" href="https://www.novexbiotech.com/products/gf-9?variant=44740877058229&amp;selling_plan=1608024245&amp;utm_source=lp&amp;utm_medium=organic&amp;utm_campaign=gf9-relaunch&amp;utm_content=c-inline-early" data-cta="inline-early">See Subscribe &amp; Save &mdash; $79/mo</a>
+        <p class="nvx-lp-reassure">Free U.S. shipping &middot; 90-day money-back guarantee&sect;</p>
+      </div>
+
       <div class="nvx-lp-item nvx-lp-rv" id="nvx-3">
         <figure class="nvx-lp-itemfig"><img src="img/swim-bw.jpg" alt="Man swimming laps in an outdoor pool at dawn" width="1200" height="525" loading="lazy" decoding="async"></figure>
         <div class="nvx-lp-item__rank"><b>3</b> of 7</div>
@@ -485,8 +493,8 @@
       <div class="nvx-lp-inline">
         <h3>The 90-day guarantee exists for this exact reason</h3>
         <p>Three months is the honest window to judge it. That is why the guarantee runs 90 days, not 30.</p>
-        <a class="nvx-lp-btn nvx-lp-cta" href="https://www.novexbiotech.com/products/gf-9" data-cta="inline-mid">See Subscribe &amp; Save &mdash; $79/mo</a>
-        <p class="nvx-lp-reassure">20.2% off the $99 one-time price &middot; ships every 30 days &middot; pause, skip, or cancel anytime&sect; &middot; Free U.S. shipping &middot; 90-day money-back guarantee&dagger;&dagger;</p>
+        <a class="nvx-lp-btn nvx-lp-cta" href="https://www.novexbiotech.com/products/gf-9?variant=44740877058229&amp;selling_plan=1608024245&amp;utm_source=lp&amp;utm_medium=organic&amp;utm_campaign=gf9-relaunch&amp;utm_content=c-inline-mid" data-cta="inline-mid">See Subscribe &amp; Save &mdash; $79/mo</a>
+        <p class="nvx-lp-reassure">20.2% off the $99 one-time price &middot; ships every 30 days, auto-renews monthly &middot; Free U.S. shipping &middot; 90-day money-back guarantee&sect;</p>
       </div>
 
       <div class="nvx-lp-item nvx-lp-rv" id="nvx-5">
@@ -495,8 +503,8 @@
         <h2>The fine print that actually costs people money</h2>
         <p>The angriest supplement reviews on the internet are rarely about the product. They are about billing.</p>
         <p>Auto-ship that arrived faster than expected. A cancellation request that landed outside a narrow window. An order someone did not remember authorizing. If you have been burned by that before, that hesitation is completely reasonable, and it is worth resolving before you buy anything &mdash; from us or anyone else.</p>
-        <p>So, plainly: with Subscribe &amp; Save you can <b>pause, skip, or cancel anytime</b> from your account &mdash; it bills and ships every 30 days, at $79, and nothing about that changes without you choosing it.&sect;</p>
-        <p>Read the guarantee terms alongside the cancellation terms, because on subscriptions the two interact &mdash; the money-back guarantee applies to your first shipment, and the 90-day window begins 5 days after that shipment ships. <a href="https://www.novexbiotech.com/pages/returns-guarantee" style="color:#a21920">Full return and guarantee terms are here.</a>&dagger;&dagger; Before you buy from any supplement brand, find that page and read it. If it is hard to find, that is the answer.</p>
+        <p>So, plainly: Subscribe &amp; Save bills and ships every 30 days, at $79, and auto-renews until you cancel &mdash; you are emailed at least 3 days before each renewal, and you can <b>cancel anytime by calling 1-800-789-7566 or logging into your account.</b>&sect;</p>
+        <p>Read the guarantee terms alongside the cancellation terms, because on subscriptions the two interact &mdash; the money-back guarantee applies to your first shipment. <a href="https://www.novexbiotech.com/pages/returns-guarantee" style="color:#a21920">Full return and guarantee terms are here.</a>&sect; Before you buy from any supplement brand, find that page and read it. If it is hard to find, that is the answer.</p>
         <div class="nvx-lp-pull"><p><b>Prefer to skip subscriptions entirely?</b> There is a one-time $99 purchase with nothing recurring attached &mdash; and no subscription terms to track.</p></div>
               <p style="margin-top:20px"><b>And one more that catches almost everyone:</b> where you buy changes what guarantee you actually have. A manufacturer&rsquo;s money-back guarantee is between you and the manufacturer. Buy the same box from a big-box retailer or a marketplace seller and you are generally inside <em>that store&rsquo;s</em> return policy instead &mdash; which may be shorter, may require the packaging, and may not care whether it worked for you.</p>
         <div class="nvx-lp-pull"><p><b>The practical rule:</b> if the guarantee is the reason you are willing to try something, buy it from the source that offers the guarantee.</p></div>
@@ -518,14 +526,14 @@
         <p>It is the most common criticism of this product, and it deserves a straight answer rather than a dodge. GF-9&reg; is not cheap. At $99 for a month, it costs more than most things on the supplement shelf.</p>
         <p>The fair counter-argument is not &ldquo;but it works&rdquo; &mdash; that is what every brand says. It is this: you can buy generic amino acids for less, and if raw ingredients are what you want, you should. What you would not be buying is the specific ratio that was actually put through a double-blind, placebo-controlled trial, or the patents filed on it, or the third-party verification, or a guarantee that lets you send it back.</p>
         <div class="nvx-lp-pull"><p><b>The honest framing:</b> the question is not whether $99 is a lot. It is whether you would rather spend it to find out with a guarantee behind you, or spend less on something with nothing behind it. If the answer is neither, that is a completely legitimate place to land.</p></div>
-        <p>If you do want to try it, Subscribe &amp; Save brings it to $79 a month &mdash; 20.2% off, shipped every 30 days, and you can cancel anytime.&sect;</p>
+        <p>If you do want to try it, Subscribe &amp; Save brings it to $79 a month &mdash; 20.2% off, shipped every 30 days, auto-renewing until you cancel.&sect;</p>
       </div>
 
     </div>
   </section>
 
   <!-- OFFER -->
-  <section class="nvx-lp-offer">
+  <section class="nvx-lp-offer" id="nvx-offer">
     <div class="nvx-lp__wrap">
       <div class="nvx-lp-center nvx-lp-lede" style="max-width:640px;margin:0 auto 34px">
         <div class="nvx-lp-eyebrow" style="color:#ff5a63">If you want to try it properly</div>
@@ -539,33 +547,36 @@
           <div class="nvx-lp-p">$99</div>
           <div class="nvx-lp-pm">1-month supply &middot; no subscription</div>
           <ul><li>Capsules or Fruit Punch Powder</li><li>Try it once, no commitment</li><li>Free U.S. shipping</li><li>90-day guarantee&dagger;&dagger;</li></ul>
-          <a class="nvx-lp-btn nvx-lp-btn--ghost nvx-lp-btn--wide nvx-lp-cta" href="https://www.novexbiotech.com/products/gf-9" data-cta="plan-onetime">Buy Once</a>
+          <a class="nvx-lp-btn nvx-lp-btn--ghost nvx-lp-btn--wide nvx-lp-cta" href="https://www.novexbiotech.com/products/gf-9?variant=44740877058229&amp;utm_source=lp&amp;utm_medium=organic&amp;utm_campaign=gf9-relaunch&amp;utm_content=c-plan-onetime" data-cta="plan-onetime">Buy Once</a>
         </div>
         <div class="nvx-lp-plan nvx-lp-plan--best">
           <span class="nvx-lp-plan__radio nvx-lp-plan__radio--on" aria-hidden="true"></span>
           <div class="nvx-lp-plan__flag">Best Value &middot; Most Popular</div>
-          <h3>3-Month Bundle</h3>
+          <h3>3-Month Delivery</h3>
           <div class="nvx-lp-p">$198</div>
-          <div class="nvx-lp-pm">$66/bottle &middot; full 90-day supply &middot; one-time payment</div>
-          <ul><li><b>Save $99</b> vs. three separate one-time purchases</li><li>Lowest price per bottle of the three options</li><li>One payment &mdash; nothing rebills</li><li>Free U.S. shipping</li></ul>
-          <a class="nvx-lp-btn nvx-lp-btn--wide nvx-lp-cta" href="https://www.novexbiotech.com/products/gf-9" data-cta="plan-bundle">Get the 3-Month Bundle</a>
+          <div class="nvx-lp-pm">Every 90 days &middot; $66/bottle</div>
+          <ul><li><b>Buy 2 Get 1 Free</b> &mdash; save $99</li><li>Free shipping</li><li>Auto-renews every 90 days &mdash; cancel anytime&Dagger;&Dagger;</li><li>90-day guarantee on your first shipment&Dagger;&Dagger;</li></ul>
+          <!-- No native variant/selling_plan for this tier - it's a 3rd-party subscription-widget offer on the PDP, not modeled in Shopify variants. Buyer selects "3-Month Delivery" on the PDP itself. Do not fabricate a selling_plan id. -->
+          <a class="nvx-lp-btn nvx-lp-btn--wide nvx-lp-cta" href="https://www.novexbiotech.com/products/gf-9?utm_source=lp&amp;utm_medium=organic&amp;utm_campaign=gf9-relaunch&amp;utm_content=c-plan-bundle" data-cta="plan-bundle">Get 3-Month Delivery</a>
         </div>
         <div class="nvx-lp-plan">
           <span class="nvx-lp-plan__radio" aria-hidden="true"></span>
           <h3>Subscribe &amp; Save</h3>
           <div class="nvx-lp-p">$79<span style="font-size:15px;color:var(--muted);font-weight:600">/mo</span></div>
           <div class="nvx-lp-pm">Ships every 30 days &middot; 20% off the $99 price</div>
-          <ul><li><b>FREE OxyDrene&reg; NAD+ Booster</b> with your order</li><li>Capsules or Fruit Punch Powder</li><li>Pause, skip, or cancel anytime&sect;</li><li>90-day guarantee on your first shipment&dagger;&dagger;</li></ul>
-          <a class="nvx-lp-btn nvx-lp-btn--wide nvx-lp-cta" href="https://www.novexbiotech.com/products/gf-9" data-cta="plan-subscribe">Get GF-9 &mdash; Subscribe &amp; Save</a>
+          <ul><li><b>FREE OxyDrene&reg; NAD+ Booster</b> with your order</li><li>Capsules or Fruit Punch Powder</li><li>Auto-renews monthly &mdash; cancel anytime&sect;</li><li>90-day guarantee&sect;</li></ul>
+          <a class="nvx-lp-btn nvx-lp-btn--wide nvx-lp-cta" href="https://www.novexbiotech.com/products/gf-9?variant=44740877058229&amp;selling_plan=1608024245&amp;utm_source=lp&amp;utm_medium=organic&amp;utm_campaign=gf9-relaunch&amp;utm_content=c-plan-subscribe" data-cta="plan-subscribe">Get GF-9 &mdash; Subscribe &amp; Save</a>
         </div>
       </div>
       <div class="nvx-lp-terms" style="margin-top:20px">
-          <div class="nvx-lp-terms__h">The 3-Month Bundle &mdash; what you are agreeing to</div>
+          <div class="nvx-lp-terms__h">3-Month Delivery &mdash; what you are agreeing to</div>
           <ul>
-            <li><b>$198 charged once</b> for a 3-month (90-day) supply &mdash; a one-time purchase, not a subscription.</li>
+            <li><b>$198 charged today</b>, then every 90 days, for a 3-month (90-day) supply &mdash; Buy 2 Get 1 Free (regular value $297).</li>
             <li><b>$66 per bottle</b> &mdash; save $99 versus three separate one-time purchases.</li>
-            <li><b>Free U.S. shipping.</b></li>
-            <li>This is a one-time purchase, not a subscription. <a href="https://www.novexbiotech.com/pages/returns-guarantee" style="color:var(--red)">See full return and guarantee terms.</a></li>
+            <li><b>Free shipping.</b></li>
+            <li><b>This is a subscription.</b> It auto-renews every 90 days at $198 until you cancel; you&rsquo;re emailed at least 3 days before each renewal.</li>
+            <li><b>Cancel anytime</b> by calling 1-800-789-7566 or logging into your account.</li>
+            <li><b>90-day money-back guarantee</b> on your first shipment. To cancel, do so before your second shipment ships &mdash; the guarantee can&rsquo;t be claimed on the second shipment. <a href="https://www.novexbiotech.com/pages/returns-guarantee" style="color:var(--red)">Full guarantee terms.</a></li>
           </ul>
         </div>
       <div class="nvx-lp-terms" style="margin-top:14px">
@@ -574,8 +585,9 @@
             <li><b>$79 charged today</b>, then every 30 days, for a 1-month supply (20.2% off the $99 one-time price).</li>
             <li><b>FREE OxyDrene&reg; NAD+ Booster</b> ships with your order.</li>
             <li><b>Free U.S. shipping.</b></li>
-            <li><b>Pause, skip, or cancel anytime</b> from your account &mdash; no phone call needed, as easy as it was to sign up.&sect;</li>
-            <li><b>90-day money-back guarantee</b> on your first shipment; your 90-day window begins 5 days after that shipment ships. <a href="https://www.novexbiotech.com/pages/returns-guarantee" style="color:var(--red)">Full guarantee terms.</a>&dagger;&dagger;</li>
+            <li><b>This is a subscription.</b> It auto-renews monthly until you cancel; you&rsquo;re emailed at least 3 days before each renewal.</li>
+            <li><b>Cancel anytime</b> by calling 1-800-789-7566 or logging into your account.&sect;</li>
+            <li><b>90-day money-back guarantee</b> on your first shipment. <a href="https://www.novexbiotech.com/pages/returns-guarantee" style="color:var(--red)">Full guarantee terms.</a></li>
           </ul>
         </div>
     </div>
@@ -589,9 +601,9 @@
         <h2>The questions we get most</h2>
       </div>
       <div class="nvx-lp-faq">
-        <details open><summary>What if it does not work for me?</summary><p>Return it within the 90-day trial period for a full refund of the purchase price. Your 90-day trial begins 5 days after your product ships.&dagger;&dagger; That is the whole reason the guarantee is 90 days rather than 30 &mdash; you need the full window to judge it fairly.</p></details>
+        <details open><summary>What if it does not work for me?</summary><p>Return any used or unused item(s) in the original packaging within 90 days of receiving your product for a full refund.&dagger;&dagger; That is the whole reason the guarantee is 90 days rather than 30 &mdash; you need the full window to judge it fairly.</p></details>
         <details><summary>Does GF-9 contain hormones?</summary><p>No. GF-9 is hormone-free. It uses an amino acid blend to stimulate your body&rsquo;s own production of human growth hormone.*</p></details>
-        <details><summary>Can I cancel a subscription easily?</summary><p>Yes &mdash; pause, skip, or cancel anytime from your account.&sect; If you would rather avoid a subscription entirely, the one-time $99 purchase carries the same guarantee.</p></details>
+        <details><summary>Can I cancel a subscription easily?</summary><p>Yes &mdash; subscriptions auto-renew until you cancel; you&rsquo;re emailed at least 3 days before each renewal, and you can cancel anytime by calling 1-800-789-7566 or logging into your account.&sect; If you would rather avoid a subscription entirely, the one-time $99 purchase carries the same guarantee.</p></details>
         <details><summary>Are there side effects?</summary><p>GF-9 is made from amino acids and manufactured in a GMP facility with third-party verification. As with any supplement, individuals respond differently &mdash; talk with your doctor before starting, especially if you have a medical condition or take prescription medication.</p></details>
         <details><summary>How do I take it?</summary><p>Take GF-9 on an empty stomach, either two hours before breakfast or two hours after dinner. Follow the directions closely.</p></details>
         <details><summary>Is this the same as testosterone therapy?</summary><p>No. GF-9 is a dietary supplement that supports growth hormone production, not testosterone therapy, and not a drug. It is not a substitute for medical care or for any treatment your doctor has prescribed.</p></details>
@@ -604,8 +616,9 @@
       <p><strong>*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease.</strong></p>
       <p>*GF-9 has been shown in a double-blind, placebo-controlled clinical trial to increase mean, serum (blood) growth hormone levels by up to 682%. All other benefits noted in these materials have not been studied in relation to the GF-9 compound.</p>
       <p>**Reviews reflect the individuals&rsquo; personal opinions. Results not typical. Individuals may have received free product or compensation in exchange for their honest review. Individual results will vary. Use in conjunction with any sensible diet and exercise regimen.</p>
-      <p>&dagger;&dagger;If, for any reason, you&rsquo;re not satisfied with your Novex purchase, simply return it within the 90-day trial period for a full refund of the purchase price. Your 90-day trial begins 5 days after your product ships.</p>
-      <p>&sect;Subscribe &amp; Save bills automatically at $79 every 30 days (20.2% off the $99 one-time price) until canceled. Pause, skip, or cancel anytime from your account &mdash; as easy as it was to sign up.</p>
+      <p>&dagger;&dagger;90-Day Money-Back Guarantee: return any used or unused item(s) in the original packaging within 90 days of receiving your product for a full refund. One complimentary return or exchange per product (subsequent returns are customer-paid).</p>
+      <p>&Dagger;&Dagger;3-Month Delivery is a subscription: it auto-renews every 90 days at $198 until you cancel, and you&rsquo;re emailed at least 3 days before each renewal. Cancel anytime by calling 1-800-789-7566 or logging into your account. The 90-day money-back guarantee applies to the first shipment of your 3-month subscription; to cancel, do so before your second shipment ships, as the guarantee cannot be claimed on the second shipment.</p>
+      <p>&sect;Subscribe &amp; Save bills $79 every 30 days (20.2% off the $99 one-time price) and auto-renews monthly until you cancel; you&rsquo;re emailed at least 3 days before each renewal. Cancel anytime by calling 1-800-789-7566 or logging into your account.</p>
       <p>GF-9 is a dietary supplement and is not a substitute for medical advice, diagnosis, or treatment. Consult your physician before beginning any supplement program. Free standard shipping on all U.S. orders.</p>
       <p style="margin-top:14px">&copy; Novex Biotech. All rights reserved. &middot; customerservice@novexbiotech.com &middot; 1-800-789-7566</p>
     </div>
@@ -613,7 +626,7 @@
 </div>
 
 <div class="nvx-lp-sticky" id="nvx-lp-sticky">
-  <a href="https://www.novexbiotech.com/products/gf-9" class="nvx-lp-cta" data-cta="sticky">Get GF-9 &mdash; $99</a>
+  <a href="https://www.novexbiotech.com/products/gf-9?variant=44740877058229&amp;utm_source=lp&amp;utm_medium=organic&amp;utm_campaign=gf9-relaunch&amp;utm_content=c-sticky" class="nvx-lp-cta" data-cta="sticky">Get GF-9 &mdash; $99</a>
   <small>90-day money-back guarantee &middot; Free U.S. shipping</small>
 </div>
 
@@ -693,6 +706,9 @@
   document.addEventListener('click',function(ev){
     var a=ev.target.closest('.nvx-lp-cta');
     if(!a) return;
+    var href=a.getAttribute('href')||'';
+    var isOutbound=/^https?:/i.test(href); /* internal anchor jumps (#nvx-offer) navigate immediately, no delay needed */
+    if(isOutbound){ ev.preventDefault(); }
     var dataCta=a.getAttribute('data-cta')||'unknown';
     var plan=NVX_PLAN_BY_CTA[dataCta];
     var p=utms();
@@ -701,6 +717,8 @@
     stampAttribution();
     track('cta_clicked',p);
     if(plan){ track('plan_selected',{plan:plan.plan,price:plan.price,page:NVX_PAGE,lp_variant:p.lp_variant}); }
+    /* small delay so the PostHog capture request has a chance to leave before the page unloads */
+    if(isOutbound){ setTimeout(function(){ window.location.href=href; },150); }
   });
 
   /* --- A/B scaffold (inert until the flag exists) - flag "gf9-lp-variant" --- */
