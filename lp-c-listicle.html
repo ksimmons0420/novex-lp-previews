@@ -34,7 +34,7 @@
   Source: review mining 2026-07-20 (Trustpilot, BBB, HighYa, indexed Reddit).
   NOTE: most independent review volume sits on the SIBLING brand SeroVital (same parent).
         Objection THEMES transfer to GF-9; demographics do NOT. No SeroVital figures are
-        cited on this page - only GF-9's own first-party 4.40 / 1,309 (full Yotpo corpus, pulled 2026-07-20).
+        cited on this page - only GF-9's own first-party 4.40 / 1,321 (live Yotpo widget, pulled 2026-08-26; supersedes the 2026-07-20 pull of 1,309).
   KEY FINDING driving this page: brand testimonials anchor 3 days-3 weeks, independent
         satisfied reviewers converge on 2-3 months, and the loudest 1-star reviews quit
         in between. Under-promising to 60-90 days aligns expectation with the guarantee.
@@ -56,7 +56,7 @@
 
   COMPLIANCE - memory/feedback_novex-biotech-compliance-rules.md
    OPEN ITEM: 628% (brand book p.10) vs 682% (packaging). Using 682%. CONFIRM WITH CLIENT.
-   REVIEW-VOLUME NOTE: this page cites GF-9's own first-party track record (4.40/1,309).
+   REVIEW-VOLUME NOTE: this page cites GF-9's own first-party track record (4.40/1,321, live Yotpo pull 2026-08-26).
    OPEN ITEM: testimonials transcribed from brand-book mockups (carried over from the prior
      Black Label build - they reference GF-9, not Black Label). VERIFY against live Yotpo -
      do not fabricate replacements if they can't be verified.
@@ -165,13 +165,17 @@
 .nvx-lp .nvx-lp-offer{background:var(--navy);color:#fff}
 .nvx-lp .nvx-lp-offer h2{color:#fff}
 .nvx-lp .nvx-lp-offer .nvx-lp-lede p{color:#b9bfd6}
-.nvx-lp .nvx-lp-offercard{background:#fff;border-radius:12px;padding:32px 28px;max-width:460px;margin:0 auto;box-shadow:0 20px 54px rgba(0,0,0,.3)}
-.nvx-lp .nvx-lp-offercard h3{color:var(--navy);font-size:22px;margin-bottom:2px}
-.nvx-lp .nvx-lp-offercard .nvx-lp-price{display:flex;align-items:baseline;gap:10px;margin:14px 0 6px;justify-content:center}
-.nvx-lp .nvx-lp-offercard .nvx-lp-price b{font-size:44px;color:var(--navy);letter-spacing:-.03em}
-.nvx-lp .nvx-lp-offercard .nvx-lp-price s{font-size:19px;color:#9aa0b8}
-.nvx-lp .nvx-lp-offercard ul{list-style:none;margin:18px 0 20px;text-align:left}
-.nvx-lp .nvx-lp-offercard li{display:flex;gap:9px;font-size:15px;color:#42485f;margin-bottom:9px}
+.nvx-lp .nvx-lp-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:start}
+.nvx-lp .nvx-lp-plan{background:#fff;border:2px solid var(--line);border-radius:12px;padding:26px 22px;box-shadow:0 4px 22px rgba(19,24,64,.06);position:relative}
+.nvx-lp .nvx-lp-plan--best{border-color:var(--red);box-shadow:0 14px 40px rgba(162,25,32,.16)}
+.nvx-lp .nvx-lp-plan__flag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--red);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:999px;white-space:nowrap}
+.nvx-lp .nvx-lp-plan__radio{position:absolute;top:20px;right:20px;width:20px;height:20px;border-radius:50%;border:2px solid var(--line);background:#fff}
+.nvx-lp .nvx-lp-plan__radio--on{border-color:var(--red);background:var(--red);box-shadow:inset 0 0 0 4px #fff}
+.nvx-lp .nvx-lp-plan h3{font-size:17px;margin-bottom:2px;color:var(--navy)}
+.nvx-lp .nvx-lp-plan .nvx-lp-p{font-size:36px;font-weight:700;color:var(--navy);letter-spacing:-.03em;margin:10px 0 2px}
+.nvx-lp .nvx-lp-plan .nvx-lp-pm{font-size:13.5px;color:var(--muted);margin-bottom:16px}
+.nvx-lp .nvx-lp-plan ul{list-style:none;margin-bottom:20px;text-align:left}
+.nvx-lp .nvx-lp-plan li{font-size:14.5px;color:#42485f;display:flex;gap:8px;margin-bottom:8px}
 
 /* faq */
 .nvx-lp .nvx-lp-faq details{background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:11px;box-shadow:0 2px 12px rgba(19,24,64,.05)}
@@ -236,6 +240,7 @@
 .nvx-lp .nvx-lp-rv.is-in{opacity:1;transform:none}
 
 @media (max-width:900px){
+  .nvx-lp .nvx-lp-plans{grid-template-columns:1fr}
   .nvx-lp .nvx-lp-months{grid-template-columns:1fr}
   .nvx-lp .nvx-lp-ingr{grid-template-columns:repeat(2,1fr);gap:16px}
   .nvx-lp .nvx-lp-proto{grid-template-columns:1fr}
@@ -276,6 +281,11 @@
    "category": "Dietary Supplement",
    "url": "https://www.novexbiotech.com/products/gf-9",
    "description": "The patented GenysFactor amino acid blend formulated to support the body's own growth hormone production. Available as capsules or Fruit Punch Powder.",
+   "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.4",
+    "reviewCount": "1321"
+   },
    "offers": [
     {
      "@type": "Offer",
@@ -293,6 +303,15 @@
      "availability": "https://schema.org/InStock",
      "url": "https://www.novexbiotech.com/products/gf-9",
      "description": "Ships every 30 days, 20.2% off the $99 one-time price. Cancel, pause, or skip anytime."
+    },
+    {
+     "@type": "Offer",
+     "name": "3-Month Bundle",
+     "price": "198.00",
+     "priceCurrency": "USD",
+     "availability": "https://schema.org/InStock",
+     "url": "https://www.novexbiotech.com/products/gf-9",
+     "description": "One-time purchase, 3-month (90-day) supply. Save $99 versus three separate one-time purchases."
     }
    ]
   },
@@ -510,18 +529,46 @@
     <div class="nvx-lp__wrap">
       <div class="nvx-lp-center nvx-lp-lede" style="max-width:640px;margin:0 auto 34px">
         <div class="nvx-lp-eyebrow" style="color:#ff5a63">If you want to try it properly</div>
-        <h2>Ninety days. Then decide.</h2>
-        <p>Everything above points at the same conclusion: judge this on a three-month window, not a three-week one. That is why the guarantee runs 90 days &mdash; on your first shipment.&dagger;&dagger;</p>
+        <h2>Three ways to try it.</h2>
+        <p>Everything above points at the same conclusion: judge this on a three-month window, not a three-week one. Rated 4.4 out of 5 across 1,321 reviews.**</p>
       </div>
-      <div class="nvx-lp-offercard">
-        <img src="https://cdn.shopify.com/s/files/1/0600/8160/2741/files/Novex-Biotech-GF-9-Box-with-Bottle.jpg?v=1752704641" alt="Novex Biotech GF-9, 120 capsules" width="700" height="700" loading="lazy" decoding="async" style="border-radius:9px;margin-bottom:16px">
-        <div class="nvx-lp-center">
-          <h3>GF-9&reg; &mdash; Subscribe &amp; Save</h3>
-          <p style="font-size:14.5px">Capsules or Fruit Punch Powder &middot; ships every 30 days</p>
-          <div class="nvx-lp-price"><b>$79</b><s>$99</s></div>
-          <p style="font-size:13.5px;color:#a21920;font-weight:700">20.2% off the one-time price &mdash; cancel anytime&sect;</p>
+      <div class="nvx-lp-plans" style="max-width:980px;margin:0 auto">
+        <div class="nvx-lp-plan">
+          <span class="nvx-lp-plan__radio" aria-hidden="true"></span>
+          <h3>Single Bottle</h3>
+          <div class="nvx-lp-p">$99</div>
+          <div class="nvx-lp-pm">1-month supply &middot; no subscription</div>
+          <ul><li>Capsules or Fruit Punch Powder</li><li>Try it once, no commitment</li><li>Free U.S. shipping</li><li>90-day guarantee&dagger;&dagger;</li></ul>
+          <a class="nvx-lp-btn nvx-lp-btn--ghost nvx-lp-btn--wide nvx-lp-cta" href="https://www.novexbiotech.com/products/gf-9" data-cta="plan-onetime">Buy Once</a>
         </div>
-        <div class="nvx-lp-terms">
+        <div class="nvx-lp-plan nvx-lp-plan--best">
+          <span class="nvx-lp-plan__radio nvx-lp-plan__radio--on" aria-hidden="true"></span>
+          <div class="nvx-lp-plan__flag">Best Value &middot; Most Popular</div>
+          <h3>3-Month Bundle</h3>
+          <div class="nvx-lp-p">$198</div>
+          <div class="nvx-lp-pm">$66/bottle &middot; full 90-day supply &middot; one-time payment</div>
+          <ul><li><b>Save $99</b> vs. three separate one-time purchases</li><li>Lowest price per bottle of the three options</li><li>One payment &mdash; nothing rebills</li><li>Free U.S. shipping</li></ul>
+          <a class="nvx-lp-btn nvx-lp-btn--wide nvx-lp-cta" href="https://www.novexbiotech.com/products/gf-9" data-cta="plan-bundle">Get the 3-Month Bundle</a>
+        </div>
+        <div class="nvx-lp-plan">
+          <span class="nvx-lp-plan__radio" aria-hidden="true"></span>
+          <h3>Subscribe &amp; Save</h3>
+          <div class="nvx-lp-p">$79<span style="font-size:15px;color:var(--muted);font-weight:600">/mo</span></div>
+          <div class="nvx-lp-pm">Ships every 30 days &middot; 20% off the $99 price</div>
+          <ul><li><b>FREE OxyDrene&reg; NAD+ Booster</b> with your order</li><li>Capsules or Fruit Punch Powder</li><li>Pause, skip, or cancel anytime&sect;</li><li>90-day guarantee on your first shipment&dagger;&dagger;</li></ul>
+          <a class="nvx-lp-btn nvx-lp-btn--wide nvx-lp-cta" href="https://www.novexbiotech.com/products/gf-9" data-cta="plan-subscribe">Get GF-9 &mdash; Subscribe &amp; Save</a>
+        </div>
+      </div>
+      <div class="nvx-lp-terms" style="margin-top:20px">
+          <div class="nvx-lp-terms__h">The 3-Month Bundle &mdash; what you are agreeing to</div>
+          <ul>
+            <li><b>$198 charged once</b> for a 3-month (90-day) supply &mdash; a one-time purchase, not a subscription.</li>
+            <li><b>$66 per bottle</b> &mdash; save $99 versus three separate one-time purchases.</li>
+            <li><b>Free U.S. shipping.</b></li>
+            <li>This is a one-time purchase, not a subscription. <a href="https://www.novexbiotech.com/pages/returns-guarantee" style="color:var(--red)">See full return and guarantee terms.</a></li>
+          </ul>
+        </div>
+      <div class="nvx-lp-terms" style="margin-top:14px">
           <div class="nvx-lp-terms__h">Subscribe &amp; Save &mdash; what you are agreeing to</div>
           <ul>
             <li><b>$79 charged today</b>, then every 30 days, for a 1-month supply (20.2% off the $99 one-time price).</li>
@@ -531,10 +578,6 @@
             <li><b>90-day money-back guarantee</b> on your first shipment; your 90-day window begins 5 days after that shipment ships. <a href="https://www.novexbiotech.com/pages/returns-guarantee" style="color:var(--red)">Full guarantee terms.</a>&dagger;&dagger;</li>
           </ul>
         </div>
-        <a class="nvx-lp-btn nvx-lp-btn--wide nvx-lp-cta" href="https://www.novexbiotech.com/products/gf-9" data-cta="offer-main">Get GF-9 &mdash; Subscribe &amp; Save</a>
-        <p class="nvx-lp-reassure nvx-lp-center">Rated 4.4 &#9733; across 1,309 reviews**</p>
-      </div>
-      <p class="nvx-lp-center" style="color:#9aa1bd;font-size:14px;margin-top:22px">Would rather not commit to a subscription? <a href="https://www.novexbiotech.com/products/gf-9" class="nvx-lp-cta" data-cta="offer-onetime" style="color:#fff;text-decoration:underline">There is a one-time $99 purchase</a> &mdash; same guarantee, no subscription.</p>
     </div>
   </section>
 
