@@ -805,6 +805,14 @@
 
 <script>
 (function(){
+  /* --- PostHog init (Novex project 579500) - idempotent official snippet, no-ops if token blank --- */
+  var NVX_PH_TOKEN='phc_mMhLVWQZEnW8XkE9EZugSRUk8BDDtPRovBUjJjMHdmUK';
+  var NVX_PH_HOST='https://us.i.posthog.com';
+  if(NVX_PH_TOKEN){
+    !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey getNextSurveyStep identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageviewId".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])},e.__SV=1)}(document,window.posthog||[]);
+    posthog.init(NVX_PH_TOKEN,{api_host:NVX_PH_HOST,capture_pageview:true});
+  }
+
   /* --- Shopify chrome hide + width unlock (inline styles bypass the editor sanitizer) --- */
   function hideChrome(){
     ['.shopify-section-group-header-group','.shopify-section-group-footer-group','.main-page-title','.page-title']
@@ -842,7 +850,8 @@
   }catch(e){revealAll();}
   setTimeout(revealAll,1500); /* FAILSAFE - broken observer or no-JS must still show everything */
 
-  /* --- funnel instrumentation: lp_pageview + cta_clicked (PostHog when present) --- */
+  /* --- funnel instrumentation: lp_pageview + cta_clicked + plan_selected (PostHog when present) --- */
+  var NVX_PAGE='b2';
   function track(name,props){
     try{ if(window.posthog&&window.posthog.capture){window.posthog.capture(name,props||{});} }catch(e){}
     try{ window.dataLayer=window.dataLayer||[]; window.dataLayer.push(Object.assign({event:name},props||{})); }catch(e){}
@@ -850,14 +859,63 @@
   function utms(){
     var o={},q=new URLSearchParams(window.location.search);
     ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'].forEach(function(k){if(q.get(k)){o[k]=q.get(k);}});
-    o.lp_variant='nvx-lp-b2-broad'; o.lp_path=window.location.pathname;
+    o.lp_variant='nvx-lp-b2-broad'; o.lp_path=window.location.pathname; o.page=NVX_PAGE;
     return o;
   }
+
+  /* --- conversion attribution bridge: stamp origin_path + variant, dedupe once/session --- */
+  var NVX_ATTR_KEY='nvx_lp_attr';
+  function stampAttribution(extra){
+    try{
+      var raw=sessionStorage.getItem(NVX_ATTR_KEY);
+      var stored=raw?JSON.parse(raw):{};
+      if(!stored.origin_path){ stored.origin_path=window.location.pathname; stored.page=NVX_PAGE; }
+      if(extra){ Object.assign(stored,extra); }
+      sessionStorage.setItem(NVX_ATTR_KEY,JSON.stringify(stored));
+    }catch(e){}
+  }
+  stampAttribution();
+
   track('lp_pageview',utms());
+
+  /* --- CTA + buying-selector clicks --- */
+  var NVX_PLAN_BY_CTA={'plan-onetime':{plan:'single',price:99},'plan-bundle':{plan:'bundle',price:198},'plan-subscribe':{plan:'subscribe',price:79}};
   document.addEventListener('click',function(ev){
     var a=ev.target.closest('.nvx-lp-cta');
-    if(a){var p=utms();p.cta_location=a.getAttribute('data-cta')||'unknown';track('cta_clicked',p);}
+    if(!a) return;
+    var dataCta=a.getAttribute('data-cta')||'unknown';
+    var plan=NVX_PLAN_BY_CTA[dataCta];
+    var p=utms();
+    p.location=plan?'offer':dataCta;
+    if(plan){ p.plan=plan.plan; }
+    stampAttribution();
+    track('cta_clicked',p);
+    if(plan){ track('plan_selected',{plan:plan.plan,price:plan.price,page:NVX_PAGE,lp_variant:p.lp_variant}); }
   });
+
+  /* --- A/B scaffold (inert until the flag exists) - flag "gf9-lp-variant" --- */
+  if(NVX_PH_TOKEN){
+    var NVX_FLAG='gf9-lp-variant';
+    var expFired=false;
+    function assignVariant(variant){
+      if(expFired) return;
+      expFired=true;
+      variant=variant||'control';
+      document.body.setAttribute('data-variant',variant);
+      stampAttribution({variant:variant});
+      track('experiment_assigned',{flag:NVX_FLAG,variant:variant,page:NVX_PAGE});
+    }
+    posthog.onFeatureFlags(function(){
+      assignVariant(posthog.getFeatureFlag(NVX_FLAG)||'control');
+    });
+    try{ posthog.reloadFeatureFlags(); }catch(e){}
+    /* FAILSAFE - auto-updating posthog-js can lazy-load config.js and never fire onFeatureFlags */
+    setTimeout(function(){
+      var v='control';
+      try{ v=(posthog.getFeatureFlag&&posthog.getFeatureFlag(NVX_FLAG))||'control'; }catch(e){}
+      assignVariant(v);
+    },2500);
+  }
 })();
 </script>
 
